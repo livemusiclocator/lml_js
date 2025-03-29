@@ -237,14 +237,26 @@ function App() {
       {selectedVenue && (
         <div className="venue-details-panel">
           <div className="venue-header">
-            <h2>{selectedVenue.name}</h2>
+            <div className="venue-title">
+              <h2>{selectedVenue.name}</h2>
+              <a 
+                href={`https://www.google.com/maps/dir/?api=1&destination=${selectedVenue.location.lat},${selectedVenue.location.lng}`} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="directions-button"
+              >
+                <span className="directions-icon">📍</span> Directions
+              </a>
+            </div>
             <p className="venue-info">
               <span className="venue-address">{selectedVenue.address}</span>
-              {selectedVenue.website && (
-                <a href={selectedVenue.website} target="_blank" rel="noopener noreferrer" className="venue-website">
-                  Visit Website
-                </a>
-              )}
+              <div className="venue-links">
+                {selectedVenue.website && (
+                  <a href={selectedVenue.website} target="_blank" rel="noopener noreferrer" className="venue-website">
+                    Visit Website
+                  </a>
+                )}
+              </div>
             </p>
             <p className="gig-count">{selectedVenue.gigCount} gig{selectedVenue.gigCount !== 1 ? 's' : ''} on {selectedDate.toLocaleDateString()}</p>
           </div>

@@ -143,28 +143,80 @@ header h1 {
   margin-bottom: 1rem;
 }
 
-.venue-header h2 {
-  margin-bottom: 0.5rem;
-  color: #222;
-}
-
-.venue-info {
+.venue-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.venue-title h2 {
+  margin: 0;
+  color: #222;
+}
+
+.directions-button {
+  display: flex;
+  align-items: center;
+  background-color: #FF5722;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.directions-button:hover {
+  background-color: #E64A19;
+}
+
+.directions-icon {
+  margin-right: 4px;
+  font-size: 14px;
+}
+
+.venue-info {
   margin-bottom: 0.75rem;
   color: #555;
   font-size: 0.9rem;
 }
 
 .venue-address {
+  display: block;
   font-style: italic;
+  margin-bottom: 0.5rem;
 }
 
-.venue-website {
+.venue-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 0.5rem;
+}
+
+.venue-website, .venue-directions {
+  display: inline-flex;
+  align-items: center;
   color: #0066cc;
   text-decoration: none;
   font-size: 0.9rem;
+  border: 1px solid #0066cc;
+  border-radius: 4px;
+  padding: 4px 10px;
+}
+
+.venue-directions {
+  color: #FF5722;
+  border-color: #FF5722;
+}
+
+.venue-directions:hover {
+  background-color: rgba(255, 87, 34, 0.1);
+}
+
+.venue-website:hover {
+  background-color: rgba(0, 102, 204, 0.1);
 }
 
 .gig-count {
